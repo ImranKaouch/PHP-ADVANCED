@@ -2,12 +2,19 @@
 <html lang="en">
 <body>
 <?php
-$dagen = array("maandag", "dinsadg", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag");
-echo "<ul>";
-foreach ($dagen as $value) {
-    echo "<li>$value</li>" ;
+
+
+$dagen = array ("Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag");
+
+foreach($dagen as $value) {
+    "<ol>";
+    echo  "<li>".  $value. "</li>" ;
+    "</ol>";
+
 }
-echo "</ul>";
+
+
+
 
 
 
