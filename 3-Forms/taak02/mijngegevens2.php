@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<link rel="stylesheet" href="invoer.css">
+<link rel="stylesheet" href="invoer2.css">
 <title>Mijngegevens</title>
 </head>
 <body>
@@ -10,6 +10,7 @@
     <?php
 
     echo  " " .$_POST["voornaam"]. " " .$_POST["achternaam"]. "<br>";
+    echo  " " .$_POST["geslacht"]. "<br>";
     echo "Klas: " .$_POST["klas"]. "<br>";
     echo " " .$_POST["leeftijd"]. " jaar <br>";
     echo " " .$_POST["adres"]. "<br>";
