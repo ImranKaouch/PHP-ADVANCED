@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<body>
 <?php
 
 $student  = array(
@@ -9,11 +10,11 @@ $student  = array(
     "Leeftijd"    => 17,
     "Woonplaats"  => "Amstelveen"
   );
-  foreach ($student as $key => $value) {
-      echo "De $key van de student is $value";
+  foreach($student as $key => $value) {
+      echo "De $key van de student is $value <br>";
   }
 ?>
-<body>
+
     
 </body>
 </html>
