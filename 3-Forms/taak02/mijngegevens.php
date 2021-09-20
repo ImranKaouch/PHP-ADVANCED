@@ -12,6 +12,10 @@ $colour = $_POST["colour"];
             body{
                 background-color: <?php echo $colour;?>
             }
+            label{
+                width:100px;
+                height:100px;
+            }
         </style>
 </head>
 <body>
