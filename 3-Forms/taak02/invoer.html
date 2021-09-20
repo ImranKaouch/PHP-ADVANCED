@@ -4,48 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoer</title>
+    <style>
+        .breedte{
+            width: 400px;
+            
+        }
+
+        .container{
+            /* display: flex; */
+            
+        }
+
+        .links{
+            width: 300px;
+            display: inline-block;
+            
+            padding: 5px;
+        }
+        
+        .rechts{
+            display: inline-block;
+            
+            padding: 5px;
+
+        }
+
+        label{
+            display: inline-block;
+            width: 100px;
+            margin: 5px;
+        }
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: medium;
+        }
+    
+    </style>
+
 </head>
 <body>
-    
-<form action="mijngegevens.php" method="post">
-    
-    Voornaam:   <input type="text" name="voornaam"> <label for="voornaam"></label><br>
-    Achternaam: <input type="text" name="achternaam"> <label for="achternaam"></label><br>
-    Klas: <input type="text" name="klas"><label for="klas"></label><br>
-    Leeftijd: <input type="text" name="leeftijd"><label for="leeftijd"></label><br>
-    Adres: <input type="text" name="adres"><label for="adres"></label><br>
-    Woonplaats: <input type="text" name="woonplaats"><label for="woonplaats"></label>
-    
+ 
+<div class="container">    
+    <form action="mijngegevens.php" method="post">
+        
+    <!-- <span class="breedte"></span>    -->
+    <div class="links"> 
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" name="voornaam"> 
 
-<!--RADIO BUTTONS-->
-<p>Geslacht:</p>
-<div>
-    <input type="radio" id="man" name="geslacht" value="man">
-    <label for="man">Man</label>
-  </div>
+        <label for="achternaam">Achternaam:</label>
+        <input type="text" name="achternaam">
+        
+        <label for="klas">Klas:</label>
+        <input type="text" name="klas"> 
 
+        <label for="leeftijd">Leeftijd:</label>
+        <input type="text" name="leeftijd">
 
-<div>
-  <input type="radio" id="vrouw" name="geslacht" value="vrouw">
-  <label for="vrouw">Vrouw</label>
+        <label for="adres">Adres:</label>
+        <input type="text" name="adres">
+
+        <label for="woonplaats">Woonplaats:</label>
+        <input type="text" name="woonplaats">
+    </div>
+        <!--RADIO BUTTONS-->
+    <div class="rechts">
+        <h1>Geslacht:</h1>
+
+        <div>
+        <input type="radio" id="man" name="geslacht" value="man">
+        <label for="man">Man</label>
+        
+        
+        
+        <input type="radio" id="vrouw" name="geslacht" value="vrouw">
+        <label for="vrouw">Vrouw</label> 
+        </div>
+
+        
+        
+        <!--COLOUR SELECT-->
+        <label for="colour"><br>Lievelings kleur:  </label>
+        <select id="colour" name="colour">
+            <option value="red">Rood</option>
+            <option value="yellow">Geel</option>
+            <option value="pink">Roze</option>
+            <option value="purple">Paars</option>
+            <option value="green">Groen</option> 
+        </select>
+        <br>
+    </div>
 </div>
-
-
-
-
-
-<!--COLOUR SELECT-->
-    <label for="colour">Lievelings kleur:  </label>
-    <select id="colour" name="colour">
-    <option value="red">Rood</option>
-    <option value="yellow">Geel</option>
-    <option value="pink">Roze</option>
-    <option value="purple">Paars</option>
-    <option value="green">Groen</option> 
-    </select>
-    <br>
-    <input type="submit" name="submit" value="verstuur">
-</form>
+        <input type="submit" name="submit" value="verstuur">
+    </form>
 
 
 </body>
