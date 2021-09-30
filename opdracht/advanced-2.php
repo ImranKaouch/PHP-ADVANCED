@@ -7,34 +7,65 @@
     <title>Tweede paina</title>
 </head>
 <body>
+
+<?php
+    $tk = $_POST['tekstkleur'];
+    $ak = $_POST['achtergrondkleur']; 
+    $td = $_POST['tabel-dikte']; 
+    $cp = $_POST['cel-padding'];
+?>
+<style>
+
+
+body {
+    <?php echo "color: $tk;"?>
+}
+
+body {
+    <?php echo "background-color: $ak;"?>
+}
+    
+table, td{
+     <?php echo "border: $td"."px solid grey;" ?>
+}
+
+td, th {
+    <?php echo "padding: $cp px;"?>
+}
+
+
+
+
+</style>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Key    </th>
+            <th>Value</th>
+        </tr>
+    </thead>
 <?php
 
 
-echo $_POST["tekstkleur"]; echo "<br>";
-echo $_POST["achtergrondkleur"]; echo "<br>";
-echo $_POST["tabel-dikte"]; echo "<br>";
-echo $_POST["cel-padding"]; echo "<br>";
+$gegevens ["Naam"] = "Imran Kaouch";
+$gegevens ["Leeftijd"] = "17";
+$gegevens ["Woonplaats"] ="Amsterdam";
+$gegevens ["Klas"] = "0A";
+$gegevens ["Muziek"] = "Rap";
+$gegevens ["Sport"] = "Voetbal";
+$gegevens ["Eten"] = "Pizza";
 
 
-echo "<table border ='$_POST[tabel-dikte]'>"
-echo "<tr>"
-
-foreach ($gegevens as $value) {
-    echo "<td> $value </td> "
+foreach ($gegevens as $key => $value) {
+    echo "<tr>";
+    echo  "<td> " .$key. "</td> ";
+    echo "<td>" .$value. "</td>";
+    echo "</tr>";
 }
-
-$gegevens ["voornaam"] = "Imran";
-$gegevens ["leeftijd"] = "17";
-$gegevens ["woonplaats"] ="Amsterdam";
-$gegevens ["klas"] = "0A";
-$gegevens ["muziek"] = "Rap";
-$gegevens ["sport"] = "Voetbal";
-$gegevens ["eten"] = "Pizza";
-
-echo "<tr>";
 echo "</table>";
-
-
 ?>
 </body>
 </html>
