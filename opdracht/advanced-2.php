@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tweede paina</title>
+    <title>Tweede pagina</title>
 </head>
 <body>
 
@@ -47,6 +47,7 @@ td, th {
             <th>Value</th>
         </tr>
     </thead>
+
 <?php
 
 
@@ -59,13 +60,25 @@ $gegevens ["Sport"] = "Voetbal";
 $gegevens ["Eten"] = "Pizza";
 
 
-foreach ($gegevens as $key => $value) {
+echo "<tbody>";
+function maakRij($key,$value) {
     echo "<tr>";
+
     echo  "<td> " .$key. "</td> ";
     echo "<td>" .$value. "</td>";
+
     echo "</tr>";
 }
+
+foreach ($gegevens as $key => $value){
+    maakRij($key,$value);
+
+};
+
+echo "</tbody>";
+
 echo "</table>";
+
 ?>
 </body>
 </html>
